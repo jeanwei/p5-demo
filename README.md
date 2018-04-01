@@ -1,34 +1,15 @@
-### Webpack Configuration Steps
-```sh
-$ npm init -y
-$ npm i -D webpack
-$ npm i -D webpack-dev-server
-$ npm i -D clean-webpack-plugin
-$ npm i -D babel-loader babel-core
-$ npm i -D babel-preset-env
-$ npm i -D html-loader html-webpack-plugin
-$ npm i -D sass-loader node-sass css-loader style-loader extract-text-webpack-plugin
-$ npm i -D file-loader
-```
+### Wikipedia Crawler with P5 (from Coding Train)
 
-Configure Bootstrap
-```sh
-$ npm view bootstrap dist-tags
-$ npm install bootstrap@next --save
-```
+loadJSON() with callback is used:
+ - to get a list of search results
+ - to browse to a search result page
+regex is used to filter JSON data returned by wiki API
 
-### Bundle command
 
-Development
-```sh
-$ npm run build
-$ npm run watch
-$ npm run dev
+### Issue faced
 ```
-Production
-```sh
-$ npm run build:prod
+No 'Access-Control-Allow-Origin' header is present on the requested resource.
+Origin 'http://localhost:12000' is therefore not allowed access.
+If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 ```
-
-References
-[https://medium.com/@nirjhor123/webpack-3-quickstarter-configure-webpack-from-scratch-30a6c394038a]
+workaround: use 'jsonp' polyfill
